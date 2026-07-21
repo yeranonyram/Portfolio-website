@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   SiReact,
+  SiAngular,
   SiTypescript,
   SiJavascript,
   SiNextdotjs,
@@ -60,6 +61,7 @@ const skills = [
     category: "Frontend",
     items: [
       { name: "React", icon: <SiReact /> },
+      { name: "Angular", icon: <SiAngular /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
       { name: "TypeScript", icon: <SiTypescript /> },
       { name: "JavaScript", icon: <SiJavascript /> },
