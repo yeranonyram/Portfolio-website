@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaChevronDown, FaGithub, FaFileDownload } from "react-icons/fa";
+import { FaChevronDown, FaFileDownload } from "react-icons/fa";
 import { ParticlesBackground } from "../ui/ParticlesBackground";
 import yerkoImage from "../../assets/images/yerko.jpg";
 

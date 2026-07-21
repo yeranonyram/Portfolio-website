@@ -135,7 +135,7 @@ export const Contact = () => {
 
 
               <a
-                href="https://linkedin.com/in/TU-LINKEDIN"
+                href="https://www.linkedin.com/in/yerko-flores-70a94a160/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-3xl hover:text-primary transition"

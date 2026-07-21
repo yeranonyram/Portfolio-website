@@ -161,7 +161,7 @@ export const Projects = () => {
                     <FaGithub size={21}/>
                   </a>
 
-
+                  
                   <a
                     href={project.demo}
                     className="
