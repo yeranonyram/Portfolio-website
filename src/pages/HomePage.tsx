@@ -1,9 +1,12 @@
-import { MainLayout } from "../layouts/MainLayout";
+import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
 
-export const HomePage = () => {
+export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <MainLayout>
-
-    </MainLayout>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
 };
