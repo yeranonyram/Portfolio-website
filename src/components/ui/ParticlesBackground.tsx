@@ -1,18 +1,29 @@
-import { useEffect } from "react";
-import Particles from "@tsparticles/react";
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 export const ParticlesBackground = () => {
-  // Cargamos el engine una sola vez cuando el componente se monta
+  const [particlesLoaded, setParticlesLoaded] = useState(false);
+
   useEffect(() => {
-    loadSlim();
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setParticlesLoaded(true);
+    });
   }, []);
+
+  if (!particlesLoaded) {
+    return null;
+  }
 
   return (
     <Particles
       id="tsparticles"
       options={{
-        background: { color: "transparent" },
+        background: {
+          color: "transparent",
+        },
         fpsLimit: 60,
         interactivity: {
           events: {
@@ -23,7 +34,9 @@ export const ParticlesBackground = () => {
           },
         },
         particles: {
-          color: { value: "#f1c40f" },
+          color: {
+            value: "#f1c40f",
+          },
           links: {
             color: "#c0392b",
             distance: 150,
@@ -32,19 +45,27 @@ export const ParticlesBackground = () => {
             width: 1,
           },
           move: {
-            direction: "none",
             enable: true,
-            outModes: { default: "out" },
-            random: false,
             speed: 0.5,
-            straight: false,
+            outModes: {
+              default: "out",
+            },
           },
           number: {
-            density: { enable: true, width: 800, height: 800 },
             value: 100,
+            density: {
+              enable: true,
+            },
           },
-          opacity: { value: 0.5 },
-          size: { value: { min: 1, max: 3 } },
+          opacity: {
+            value: 0.5,
+          },
+          size: {
+            value: {
+              min: 1,
+              max: 3,
+            },
+          },
         },
         detectRetina: true,
       }}
