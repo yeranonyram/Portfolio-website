@@ -1,11 +1,20 @@
 import { Header } from "../components/layout/Header";
+import { Hero } from "../components/sections/Hero";
+import { About } from "../components/sections/About";
+import { Skills } from "../components/sections/Skills";
+import { Projects } from "../components/sections/Projects";
+import { Contact } from "../components/sections/Contact";
 import { Footer } from "../components/layout/Footer";
 
-export const MainLayout = ({ children }: { children: React.ReactNode }) => {
+export const HomePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>{children}</main>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
       <Footer />
     </div>
   );

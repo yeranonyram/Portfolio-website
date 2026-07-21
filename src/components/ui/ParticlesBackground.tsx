@@ -1,16 +1,16 @@
-import { useCallback } from "react";
+import { useEffect } from "react";
 import Particles from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 export const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine: any) => {
-    await loadSlim(engine);
+  // Cargamos el engine una sola vez cuando el componente se monta
+  useEffect(() => {
+    loadSlim();
   }, []);
 
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       options={{
         background: { color: "transparent" },
         fpsLimit: 60,
