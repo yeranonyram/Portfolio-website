@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+
 import {
   SiReact,
   SiAngular,
@@ -19,26 +20,31 @@ import {
   SiGit,
   SiSwagger,
   SiSequelize,
+  SiRender,
+  SiGithub,
 } from "react-icons/si";
 
 import {
   FaLaravel,
   FaPython,
-  FaAws,
+  FaDatabase,
 } from "react-icons/fa6";
 
+
 const skills = [
+
   {
     category: "Backend",
     items: [
       { name: "Node.js", icon: <SiNodedotjs /> },
       { name: "NestJS", icon: <SiNestjs /> },
-      { name: "Express", icon: <SiExpress /> },
+      { name: "Express.js", icon: <SiExpress /> },
       { name: "Laravel", icon: <FaLaravel /> },
       { name: "Django", icon: <FaPython /> },
       { name: "Swagger / OpenAPI", icon: <SiSwagger /> },
     ],
   },
+
 
   {
     category: "Bases de Datos",
@@ -49,13 +55,15 @@ const skills = [
     ],
   },
 
+
   {
     category: "ORM / Data Access",
     items: [
-      { name: "TypeORM", icon: <SiPostgresql /> },
+      { name: "TypeORM", icon: <FaDatabase /> },
       { name: "Sequelize", icon: <SiSequelize /> },
     ],
   },
+
 
   {
     category: "Frontend",
@@ -70,47 +78,85 @@ const skills = [
     ],
   },
 
+
   {
     category: "DevOps & Cloud",
     items: [
       { name: "Docker", icon: <SiDocker /> },
       { name: "GitHub Actions", icon: <SiGithubactions /> },
-      { name: "AWS Cloud", icon: <FaAws /> },
+      { name: "CI/CD", icon: <SiGithub /> },
+      { name: "Render", icon: <SiRender /> },
       { name: "Git", icon: <SiGit /> },
     ],
   },
+
 ];
 
+
 export const Skills = () => {
+
   const ref = useRef(null);
+
   const isInView = useInView(ref, { once: true });
 
+
   return (
+
     <section
       id="habilidades"
       ref={ref}
       className="py-20 bg-background"
     >
+
       <div className="container mx-auto px-6">
+
+
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="font-metal text-4xl md:text-5xl text-primary mb-12 text-center"
+          className="
+            font-metal
+            text-4xl
+            md:text-5xl
+            text-primary
+            mb-12
+            text-center
+          "
         >
           Tecnologías
         </motion.h2>
 
+
+
         <div className="grid md:grid-cols-2 gap-8">
+
+
           {skills.map((group, index) => (
+
             <motion.div
+
               key={group.category}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
+
+              initial={{
+                opacity:0,
+                y:30
               }}
+
+              animate={
+                isInView
+                ? {
+                    opacity:1,
+                    y:0
+                  }
+                : {}
+              }
+
+              transition={{
+                duration:0.5,
+                delay:index * 0.15
+              }}
+
               className="
                 bg-surface/50
                 rounded-xl
@@ -121,6 +167,8 @@ export const Skills = () => {
                 transition
               "
             >
+
+
               <h3
                 className="
                   text-xl
@@ -132,10 +180,18 @@ export const Skills = () => {
                 {group.category}
               </h3>
 
+
+
               <div className="grid grid-cols-2 gap-5">
-                {group.items.map((skill) => (
+
+
+                {group.items.map((skill)=>(
+
+
                   <div
+
                     key={skill.name}
+
                     className="
                       flex
                       items-center
@@ -145,16 +201,40 @@ export const Skills = () => {
                       transition
                     "
                   >
-                    <span className="text-2xl">{skill.icon}</span>
 
-                    <span>{skill.name}</span>
+
+                    <span className="text-2xl">
+                      {skill.icon}
+                    </span>
+
+
+                    <span>
+                      {skill.name}
+                    </span>
+
+
                   </div>
+
+
                 ))}
+
+
               </div>
+
+
             </motion.div>
+
+
           ))}
+
+
         </div>
+
+
       </div>
+
+
     </section>
+
   );
 };

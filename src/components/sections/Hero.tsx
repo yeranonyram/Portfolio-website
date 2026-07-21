@@ -45,19 +45,20 @@ export const Hero = () => {
             </motion.h2>
 
 
+            {/* DESCRIPCIÓN PRINCIPAL ACTUALIZADA */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
               className="mt-5 text-xl md:text-2xl text-muted"
             >
-              Especializado en{" "}
+              Ingeniero Informático |{" "}
 
               <span className="text-secondary font-semibold">
-                Backend
+                Backend Engineer
               </span>
 
-              {" "}con{" "}
+              {" "}especializado en{" "}
 
               <span className="text-primary">
                 Node.js, NestJS y TypeScript
@@ -67,6 +68,7 @@ export const Hero = () => {
 
 
 
+            {/* TEXTO PROFESIONAL ACTUALIZADO */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -75,7 +77,8 @@ export const Hero = () => {
             >
               Desarrollo APIs escalables, arquitecturas backend y sistemas
               empresariales utilizando Node.js, NestJS, PostgreSQL, Docker
-              y tecnologías cloud.
+              y tecnologías cloud. Apasionado por construir soluciones
+              limpias, mantenibles y orientadas a resultados.
             </motion.p>
 
 
@@ -109,25 +112,25 @@ export const Hero = () => {
 
 
               <a
-                href="/portfolio-website/Yerko_Flores_Mamani_Developer_CV.pdf"               
-                  download
-                  className="
-                  px-8 py-3
-                  border border-secondary
-                  text-secondary
-                  font-bold
-                  rounded-full
-                  hover:bg-secondary/10
-                  transition-all
-                  hover:scale-105
-                  flex
-                  items-center
-                  justify-center
-                  gap-2
-                  "
-                >
-                  <FaFileDownload />
-                  Descargar CV
+                href="/portfolio-website/Yerko_Flores_Mamani_Developer_CV.pdf"
+                download
+                className="
+                px-8 py-3
+                border border-secondary
+                text-secondary
+                font-bold
+                rounded-full
+                hover:bg-secondary/10
+                transition-all
+                hover:scale-105
+                flex
+                items-center
+                justify-center
+                gap-2
+                "
+              >
+                <FaFileDownload />
+                Descargar CV
               </a>
 
 
@@ -152,18 +155,10 @@ export const Hero = () => {
             </motion.div>
 
 
-
-            {/* REDES */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
-              className="mt-8 flex justify-center md:justify-start gap-6"
-            >
-
-            </motion.div>
-
           </div>
+
+
+
 
           {/* FOTO */}
           <motion.div
@@ -190,7 +185,6 @@ export const Hero = () => {
             />
 
 
-
             {/* ESPECIALIDAD */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -209,12 +203,17 @@ export const Hero = () => {
             >
 
               <p className="text-secondary font-bold text-lg">
-                Backend Engineer
+                Ingeniero Informático
               </p>
 
 
               <p className="text-muted text-sm mt-1">
-                Node.js • NestJS • PostgreSQL
+                Universidad Autónoma Tomás Frías
+              </p>
+
+
+              <p className="text-primary text-sm mt-1">
+                Backend Engineer • Node.js • NestJS • PostgreSQL
               </p>
 
 

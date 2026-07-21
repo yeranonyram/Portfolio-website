@@ -25,33 +25,37 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6 text-muted leading-relaxed text-lg"
           >
-            <p>
-              Soy <span className="text-primary font-semibold">Yerko Flores</span>,
-              desarrollador <span className="text-secondary font-semibold">Full Stack</span>
-              especializado en el desarrollo de aplicaciones web modernas,
-              escalables y seguras utilizando tecnologías como
-              <span className="text-primary"> React, TypeScript, NestJS y PostgreSQL</span>.
-            </p>
+          <p>
+            Soy <span className="text-primary font-semibold">Yerko Flores</span>,
+            Ingeniero Informático titulado por la{" "}
+            <span className="text-primary font-semibold">
+              Universidad Autónoma Tomás Frías
+            </span>.
+            Especializado en desarrollo{" "}
+            <span className="text-secondary font-semibold">
+              Backend
+            </span>{" "}
+            y construcción de aplicaciones web modernas, escalables y seguras.
+          </p>
 
-            <p>
-              Disfruto diseñar arquitecturas limpias, construir APIs REST,
-              implementar autenticación con JWT, bases de datos relacionales,
-              documentación con Swagger, pruebas con Jest y despliegues
-              automatizados mediante Docker, GitHub Actions y Render.
-            </p>
+          <p>
+            Me especializo en diseñar arquitecturas limpias, construir APIs REST,
+            implementar autenticación con JWT, trabajar con bases de datos relacionales,
+            documentación mediante Swagger, pruebas con Jest y despliegues automatizados
+            utilizando Docker, GitHub Actions y Render.
+          </p>
 
-            <p>
-              Mi objetivo es crear software que no solo funcione correctamente,
-              sino que también sea mantenible, eficiente y preparado para crecer
-              en entornos profesionales.
-            </p>
+          <p>
+            Mi objetivo es crear software que no solo funcione correctamente,
+            sino que sea mantenible, eficiente y preparado para crecer en entornos
+            profesionales.
+          </p>
 
-            <p>
-              Además del desarrollo de software, la música forma parte de mi
-              identidad desde hace muchos años. Esa combinación entre creatividad,
-              disciplina y resolución de problemas es la que intento reflejar en
-              cada proyecto que desarrollo.
-            </p>
+          <p>
+            Además del desarrollo de software, la música forma parte de mi identidad
+            desde hace muchos años. Esa combinación entre creatividad, disciplina y
+            resolución de problemas es la que reflejo en cada proyecto que desarrollo.
+          </p>
           </motion.div>
 
           <motion.div
