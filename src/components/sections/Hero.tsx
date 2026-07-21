@@ -109,7 +109,7 @@ export const Hero = () => {
 
 
               <a
-                href="/Portfolio-website/CV-Yerko-Flores.pdf"
+                href="/Portfolio-website/Yerko_Flores_Mamani_Developer_CV"
                 download
                 className="
                 px-8 py-3
